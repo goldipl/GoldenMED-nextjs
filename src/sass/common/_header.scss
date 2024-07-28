@@ -1,3 +1,10 @@
+body,
+html {
+  &.hidden {
+    overflow: hidden;
+  }
+}
+
 .header {
   position: absolute;
   top: 0;
@@ -156,6 +163,7 @@
         transform: translateY(-150%);
         z-index: 8;
         background-color: $golden02;
+        overflow-y: scroll;
         &.show {
           transform: translateY(0);
         }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logoGoldenMed from "./../../../public/icons/common/goldenmed-logo.svg";
 import whiteCaretDownIcon from "./../../../public/icons/common/white_caret_down.svg";
 import Link from "next/link";
@@ -15,6 +15,21 @@ const Header = () => {
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.classList.add("hidden");
+      document.getElementsByTagName("html")[0].classList.add("hidden");
+    } else {
+      document.body.classList.remove("hidden");
+      document.getElementsByTagName("html")[0].classList.remove("hidden");
+    }
+
+    return () => {
+      document.body.classList.remove("hidden");
+      document.getElementsByTagName("html")[0].classList.remove("hidden");
+    };
+  }, [isMobileMenuOpen]);
 
   return (
     <header className={`header ${isMenuVisible ? "menu-expanded" : ""}`}>
