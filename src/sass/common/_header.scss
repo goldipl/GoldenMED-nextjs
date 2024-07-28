@@ -57,6 +57,12 @@
             }
           }
           &.list-second-level {
+            .expand-menu-btn {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              cursor: pointer;
+            }
             .caretdown-icon {
               display: flex;
               margin-left: 6px;
@@ -167,24 +173,27 @@
             span,
             > img {
               text-align: center;
-              margin: 0 0 8px 0;
             }
             &.list-second-level {
-              flex-direction: row;
+              flex-direction: column;
+              padding-bottom: 8px;
               .menu-wrapper.show {
                 position: relative;
                 top: 0;
                 width: 100%;
                 justify-content: center;
                 align-items: center;
+                padding: 8px;
+                margin-top: 8px;
                 .full-grey-btn {
                   display: flex;
                   height: 28px;
-                  margin-bottom: 8px;
-                  margin: 6px 0 8px;
+                  margin: 8px 0;
+                  padding: 8px 0 16px 0;
                   border-bottom: 1px solid $grey_color03;
                   &:last-of-type {
                     border-bottom: 0;
+                    margin-bottom: 0;
                   }
                 }
               }

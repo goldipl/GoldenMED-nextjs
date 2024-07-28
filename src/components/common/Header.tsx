@@ -40,14 +40,16 @@ const Header = () => {
               className="nav-list-li list-second-level"
               onClick={handleMenuToggle}
             >
-              <span>Oferta</span>
-              <img
-                className="caretdown-icon"
-                src={whiteCaretDownIcon.src}
-                alt="white caret down"
-                height={20}
-                width={16}
-              />
+              <div className="expand-menu-btn">
+                <span>Oferta</span>
+                <img
+                  className="caretdown-icon"
+                  src={whiteCaretDownIcon.src}
+                  alt="white caret down"
+                  height={20}
+                  width={16}
+                />
+              </div>
               <div className={`menu-wrapper ${isMenuVisible ? "show" : ""}`}>
                 <div className="menu-wrapper__slot">
                   <h3 className="menu-wrapper__slot--title"></h3>
