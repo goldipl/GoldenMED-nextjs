@@ -52,50 +52,26 @@ const Header = () => {
               </div>
               <div className={`menu-wrapper ${isMenuVisible ? "show" : ""}`}>
                 <div className="menu-wrapper__slot">
-                  <h3 className="menu-wrapper__slot--title"></h3>
-                  <a href="" className="menu-wrapper__slot--item"></a>
-                  <a href="" className="menu-wrapper__slot--item"></a>
-                  <a href="" className="menu-wrapper__slot--item"></a>
-                  <a href="" className="menu-wrapper__slot--item"></a>
-                  <a href="" className="menu-wrapper__slot--item"></a>
-                  <a href="" className="menu-wrapper__slot--item"></a>
-                  <a href="" className="menu-wrapper__slot--item see-all"></a>
-                </div>
-                <div className="menu-wrapper__slot">
-                  <h3 className="menu-wrapper__slot--title"></h3>
-                  <a href="" className="menu-wrapper__slot--item"></a>
-                  <a href="" className="menu-wrapper__slot--item"></a>
-                  <a href="" className="menu-wrapper__slot--item"></a>
-                  <a href="" className="menu-wrapper__slot--item"></a>
-                  <a href="" className="menu-wrapper__slot--item"></a>
-                  <a href="" className="menu-wrapper__slot--item"></a>
-                  <a href="" className="menu-wrapper__slot--item see-all"></a>
-                </div>
-                <div className="menu-wrapper__slot">
-                  <h3 className="menu-wrapper__slot--title"></h3>
-                  <a href="" className="menu-wrapper__slot--item"></a>
-                  <a href="" className="menu-wrapper__slot--item"></a>
-                  <a href="" className="menu-wrapper__slot--item"></a>
-                  <a href="" className="menu-wrapper__slot--item"></a>
-                  <a href="" className="menu-wrapper__slot--item"></a>
-                  <a href="" className="menu-wrapper__slot--item"></a>
-                  <a href="" className="menu-wrapper__slot--item see-all"></a>
-                </div>
-                <div className="menu-wrapper__btns">
-                  <a className="full-grey-btn" href="#">
-                    Nasz zespół
+                  <h3 className="menu-wrapper__slot--title">
+                    Popularne usługi
+                  </h3>
+                  <a href="" className="menu-wrapper__slot--item">
+                    Laseroterapia
                   </a>
-                  <a className="full-grey-btn" href="#">
-                    Promocje
+                  <a href="" className="menu-wrapper__slot--item">
+                    Medycyna estetyczna
                   </a>
-                  <a className="full-grey-btn" href="#">
-                    Cennik usług
+                  <a href="" className="menu-wrapper__slot--item">
+                    Kosmetologia
                   </a>
                 </div>
               </div>
             </li>
             <li className="nav-list-li">
               <a href="">Nasza kadra</a>
+            </li>
+            <li className="nav-list-li">
+              <a href="">Cennik</a>
             </li>
             <li className="nav-list-li">
               <a href="">Aktualności</a>
