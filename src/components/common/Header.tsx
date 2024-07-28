@@ -95,13 +95,10 @@ const Header = () => {
               </div>
             </li>
             <li className="nav-list-li">
-              <a href="">Zespół</a>
+              <a href="">Nasza kadra</a>
             </li>
             <li className="nav-list-li">
               <a href="">Aktualności</a>
-            </li>
-            <li className="nav-list-li">
-              <a href="">Porady</a>
             </li>
             <li className="nav-list-li">
               <a href="">Kontakt</a>
