@@ -1,0 +1,166 @@
+.footer {
+  background-color: $grey_color05;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  &-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 1240px;
+    height: 100%;
+    margin: 0 auto;
+    &-top {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 64px 0;
+      width: 100%;
+      &-col {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 25%;
+        &:first-of-type {
+          width: 35%;
+          > a {
+            > img {
+              filter: invert(0.9);
+            }
+          }
+        }
+        > h2 {
+          font: normal normal bold 16px/36px Poppins;
+          color: $golden01;
+          margin: 0;
+        }
+        > a {
+          font: normal normal 300 16px/36px Poppins;
+          color: $black_color;
+          margin: 0;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        .footer-info-text {
+          display: flex;
+          flex-direction: column;
+          margin: 24px 0;
+        }
+        .location-info {
+          > a {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            padding: 10px 22px;
+            border-radius: 24px;
+            width: max-content;
+            height: 52px;
+            transition: 0.6s;
+            background-color: $transparent;
+            border: 1px solid $golden01;
+            font: normal normal 300 16px/44px Poppins;
+            &:hover {
+              background-color: $golden01;
+              span {
+                color: $white_color;
+              }
+              img {
+                display: none;
+              }
+            }
+            img {
+              object-fit: contain;
+              width: 16px;
+              height: auto;
+              display: flex;
+              margin: 0 6px 0 0;
+            }
+            span {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: center;
+              width: 100%;
+              height: 100%;
+              font: normal normal 300 16px/44px Poppins;
+              color: $black_color;
+            }
+          }
+        }
+      }
+    }
+    &-bottom {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 16px 0;
+      &::before {
+        position: absolute;
+        top: 0;
+        content: "";
+        display: flex;
+        width: 100vw;
+        border-top: 1px solid $grey_color01;
+      }
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .footer {
+    &-wrapper {
+      width: 100%;
+      &-top {
+        flex-wrap: wrap;
+        padding: 32px 16px;
+        gap: 24px;
+        &-col {
+          flex-direction: column;
+          width: max-content;
+          &:first-of-type {
+            width: 100%;
+          }
+          > h2 {
+            font: normal normal bold 14px/22px Poppins;
+          }
+          > a {
+            font: normal normal 300 14px/22px Poppins;
+          }
+          .footer-info-text {
+            margin: 12px 0 6px;
+            p {
+              font: normal normal 14px/22px Poppins;
+            }
+          }
+          .location-info {
+            margin: 12px 0;
+            > a {
+              height: 36px;
+              font: normal normal 300 14px/28px Poppins;
+              span {
+                font: normal normal 300 14px/28px Poppins;
+              }
+            }
+          }
+        }
+      }
+      &-bottom {
+        span {
+          font: normal normal 300 14px/28px Poppins;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.tips-section {
+  background-color: $white_color;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  &-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 1240px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 64px 0;
+    h2 {
+      font: normal normal 500 32px/44px Poppins;
+      color: $golden01;
+      margin: 0 0 24px 0;
+    }
+    p {
+      font: normal normal 200 16px/28px Poppins;
+      margin: 0 0 16px 0;
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .tips-section {
+    padding: 24px 16px;
+    &-wrapper {
+      width: 100%;
+      padding: 0;
+      h2 {
+        font: normal normal 300 22px/32px Poppins;
+        margin: 16px 0;
+      }
+      p {
+        font: normal normal 200 14px/20px Poppins;
+      }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+.welcome-section {
+  background-color: $grey_color04;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  &-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 1240px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 64px 0;
+    &__img {
+      display: flex;
+      margin: 0 80px 0 0;
+      img {
+        object-fit: contain;
+      }
+    }
+    &__text {
+      h2 {
+        font: normal normal 300 32px/44px Poppins;
+        margin: 0 0 24px 0;
+        span {
+          font: normal normal 500 32px/44px Poppins;
+          color: $golden01;
+        }
+      }
+      p {
+        font: normal normal 200 16px/28px Poppins;
+        margin: 0 0 16px 0;
+      }
+      .tags {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 24px 0 0 0;
+        gap: 16px;
+        &-slot {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-decoration: none;
+          padding: 10px 24px;
+          border-radius: 24px;
+          border: 1px solid $golden01;
+          font: normal normal 400 17px/21px Poppins;
+          color: $grey_color01;
+          width: max-content;
+          height: 100%;
+          cursor: pointer;
+          transition: 0.6s;
+          &:hover {
+            background-color: $golden01;
+            color: $white_color;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .welcome-section {
+    flex-direction: column;
+    padding: 24px 16px;
+    &-wrapper {
+      flex-direction: column;
+      width: 100%;
+      padding: 0;
+      &__img {
+        margin: 0;
+        img {
+          width: 30%;
+          height: auto;
+        }
+      }
+      &__text {
+        h2 {
+          font: normal normal 300 22px/32px Poppins;
+          margin: 16px 0;
+          span {
+            font: normal normal 500 22px/32px Poppins;
+            color: $golden01;
+          }
+        }
+        p {
+          font: normal normal 200 14px/20px Poppins;
+        }
+        .tags {
+          flex-wrap: wrap;
+          &-slot {
+            font: normal normal 400 14px/19px Poppins;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+// Global styles
+@import "./global/reset";
+@import "./global/fonts";
+@import "./global/global";
+@import "./global/variables";
+
+// Common styles
+@import "./common/header";
+@import "./common/footer";
+
+// Home page
+@import "./home/hero";
+@import "./home/welcome_section";
+@import "./home/tips_section";
