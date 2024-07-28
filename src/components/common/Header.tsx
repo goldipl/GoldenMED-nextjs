@@ -110,9 +110,6 @@ const Header = () => {
           <a className="full-white-btn" href="#">
             umów wizytę
           </a>
-          <a className="small-border-white-btn" href="#">
-            en
-          </a>
           <Hamburger onClick={toggleMobileMenu} isOpen={isMobileMenuOpen} />
         </div>
       </div>

@@ -105,20 +105,6 @@
         background-color: $white_color;
         color: $grey_color01;
       }
-      .small-border-white-btn {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        width: 56px;
-        height: 36px;
-        text-decoration: none;
-        border-radius: 119px;
-        border: 2px solid $golden01;
-        color: $white_color;
-        text-transform: uppercase;
-        margin-left: 18px;
-      }
     }
   }
 }
@@ -208,10 +194,6 @@
       }
       &__btns {
         margin: 0 0 8px 0;
-        .small-border-white-btn {
-          border-color: $white_color;
-          margin-left: 6px;
-        }
         .full-white-btn {
           display: none;
         }
