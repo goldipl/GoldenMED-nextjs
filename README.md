@@ -48,7 +48,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Live link
 
-https://goldipl.github.io/nextjs-goldenmed/
+https://goldipl.github.io/GoldenMED-nextjs/
 
 ## Info about Next.js
 
