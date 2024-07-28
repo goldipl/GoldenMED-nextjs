@@ -95,6 +95,8 @@ html {
                   color: $white_color;
                   margin: 0 0 16px 0;
                   text-transform: uppercase;
+                  width: max-content;
+                  border-bottom: 1px solid $golden01;
                 }
                 &--item {
                   margin: 8px 16px 8px 0;
