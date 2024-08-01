@@ -17,17 +17,20 @@ const Header = () => {
   };
 
   useEffect(() => {
+    const bodyClassList = document.body.classList;
+    const htmlClassList = document.documentElement.classList;
+
     if (isMobileMenuOpen) {
-      document.body.classList.add("hidden");
-      document.getElementsByTagName("html")[0].classList.add("hidden");
+      bodyClassList.add("hidden");
+      htmlClassList.add("hidden");
     } else {
-      document.body.classList.remove("hidden");
-      document.getElementsByTagName("html")[0].classList.remove("hidden");
+      bodyClassList.remove("hidden");
+      htmlClassList.remove("hidden");
     }
 
     return () => {
-      document.body.classList.remove("hidden");
-      document.getElementsByTagName("html")[0].classList.remove("hidden");
+      bodyClassList.remove("hidden");
+      htmlClassList.remove("hidden");
     };
   }, [isMobileMenuOpen]);
 
