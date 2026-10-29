@@ -17,7 +17,7 @@ html {
   width: 100%;
   transition: all 0.6s;
   &.menu-expanded {
-    height: 240px;
+    height: 330px;
   }
   p {
     font: normal normal 300 18px/82px Poppins;
@@ -63,6 +63,13 @@ html {
               text-shadow: 1px 0 0 $white_color;
             }
           }
+          &.active > a,
+          &.active .expand-menu-btn span {
+            text-decoration: underline;
+            text-decoration-color: $golden05;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 8px;
+          }
           &.list-second-level {
             .expand-menu-btn {
               display: flex;
@@ -81,7 +88,8 @@ html {
               top: 115px;
               left: 0;
               width: 100%;
-              height: 112px;
+              height: 215px;
+              gap: 96px;
               margin: 0 auto;
               opacity: 1;
               backdrop-filter: blur(43px);
@@ -91,6 +99,9 @@ html {
                 display: flex;
               }
               &__slot {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
                 &--title {
                   color: $white_color;
                   margin: 0 0 16px 0;
@@ -99,7 +110,7 @@ html {
                   border-bottom: 1px solid $golden01;
                 }
                 &--item {
-                  margin: 8px 16px 8px 0;
+                  margin: 8px 0;
                 }
               }
               &__btns {
@@ -164,7 +175,7 @@ html {
         transition: 0.4s;
         transform: translateY(-150%);
         z-index: 8;
-        background-color: $golden02;
+        background-color: rgba($dark_brown, 0.96);
         overflow-y: scroll;
         &.show {
           transform: translateY(0);
@@ -198,6 +209,8 @@ html {
               flex-direction: column;
               padding-bottom: 8px;
               .menu-wrapper.show {
+                flex-direction: column;
+                gap: 0;
                 position: relative;
                 top: 0;
                 height: auto;

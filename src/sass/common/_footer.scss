@@ -16,7 +16,7 @@
     &-top {
       display: flex;
       flex-direction: row;
-      align-items: center;
+      align-items: flex-start;
       justify-content: flex-start;
       padding: 64px 0;
       width: 100%;
@@ -52,6 +52,13 @@
           display: flex;
           flex-direction: column;
           margin: 24px 0;
+        }
+        .footer-hours {
+          font: normal normal 300 14px/28px Poppins;
+          color: $grey_color01;
+          span {
+            color: $black_color;
+          }
         }
         .location-info {
           > a {
@@ -137,6 +144,9 @@
           }
           > a {
             font: normal normal 300 14px/22px Poppins;
+          }
+          .footer-hours {
+            font: normal normal 300 13px/22px Poppins;
           }
           .footer-info-text {
             margin: 12px 0 6px;

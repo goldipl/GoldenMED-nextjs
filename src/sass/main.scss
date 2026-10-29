@@ -5,10 +5,22 @@
 @import "./global/variables";
 
 // Common styles
+@import "./common/ui";
+@import "./common/cards";
 @import "./common/header";
 @import "./common/footer";
+@import "./common/page_hero";
+@import "./common/contact_cta";
 
 // Home page
 @import "./home/hero";
 @import "./home/welcome_section";
 @import "./home/tips_section";
+@import "./home/home_sections";
+@import "./home/why_us_section";
+
+// Subpages
+@import "./pages/page_section";
+@import "./pages/pricing";
+@import "./pages/contact";
+@import "./pages/search";

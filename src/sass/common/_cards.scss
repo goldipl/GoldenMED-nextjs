@@ -1,0 +1,185 @@
+.service-card,
+.news-card,
+.team-card,
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 32px;
+  border-radius: 16px;
+  border: 1px solid $grey_color03;
+  background-color: $white_color;
+}
+
+.service-card,
+.news-card {
+  text-decoration: none;
+  color: $black_color;
+  transition: 0.4s;
+  &:hover {
+    border-color: $golden01;
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgb(46 35 6 / 10%);
+  }
+}
+
+.service-card {
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: $golden04;
+    color: $golden01;
+  }
+  &__title {
+    font: normal normal 500 20px/28px Poppins;
+  }
+  &__text {
+    font: normal normal 200 15px/24px Poppins;
+  }
+  &__more {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+    font: normal normal 400 15px/21px Poppins;
+    color: $golden01;
+  }
+}
+
+.news-card {
+  &__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    time {
+      font: normal normal 300 14px/20px Poppins;
+      color: $grey_color01;
+    }
+  }
+  &__category {
+    padding: 2px 12px;
+    border-radius: 12px;
+    background-color: $golden04;
+    font: normal normal 400 12px/20px Poppins;
+    color: $golden01;
+  }
+  &__title {
+    font: normal normal 500 20px/28px Poppins;
+  }
+  &__excerpt {
+    font: normal normal 200 15px/24px Poppins;
+  }
+  &__more {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+    font: normal normal 400 15px/21px Poppins;
+    color: $golden01;
+  }
+}
+
+.team-card {
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  &__avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 96px;
+    height: 96px;
+    margin: 0 0 8px 0;
+    border-radius: 50%;
+    background: linear-gradient(135deg, $golden01, $golden05);
+    font: normal normal 500 28px/28px Poppins;
+    letter-spacing: 1px;
+    color: $white_color;
+  }
+  &__name {
+    font: normal normal 500 18px/26px Poppins;
+    small {
+      font: normal normal 300 14px/26px Poppins;
+      color: $grey_color01;
+    }
+  }
+  &__role {
+    font: normal normal 400 14px/20px Poppins;
+    color: $golden01;
+  }
+  &__bio {
+    font: normal normal 200 15px/24px Poppins;
+    margin: 8px 0 0 0;
+  }
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin: 8px 0 0 0;
+    a {
+      padding: 2px 12px;
+      border-radius: 12px;
+      background-color: $golden04;
+      font: normal normal 400 12px/20px Poppins;
+      color: $golden01;
+      text-decoration: none;
+      &:hover {
+        background-color: $golden01;
+        color: $white_color;
+      }
+    }
+  }
+}
+
+.testimonial-card {
+  margin: 0;
+  &::before {
+    content: "\201C";
+    height: 32px;
+    font: normal normal 500 72px/64px Georgia, serif;
+    color: $golden01;
+  }
+  blockquote {
+    font: italic normal 200 16px/28px Poppins;
+  }
+  figcaption {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    strong {
+      font: normal normal 500 16px/24px Poppins;
+    }
+    span {
+      font: normal normal 300 14px/20px Poppins;
+      color: $golden01;
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .service-card,
+  .news-card,
+  .team-card,
+  .testimonial-card {
+    padding: 24px;
+    gap: 12px;
+  }
+  .service-card__title,
+  .news-card__title {
+    font: normal normal 500 18px/26px Poppins;
+  }
+  .service-card__text,
+  .news-card__excerpt,
+  .team-card__bio {
+    font: normal normal 200 14px/22px Poppins;
+  }
+  .testimonial-card blockquote {
+    font: italic normal 200 14px/22px Poppins;
+  }
+}

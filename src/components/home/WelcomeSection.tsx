@@ -1,6 +1,7 @@
 import React from "react";
 import faceImg from "./../../../public/icons/home/beauty.svg";
 import Link from "next/link";
+import { services } from "@/data/services";
 
 const WelcomeSection = () => {
   return (
@@ -14,25 +15,28 @@ const WelcomeSection = () => {
             <span>Witaj</span> w Golden Med
           </h2>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam
-            cumque illum ad architecto facere, ipsam earum possimus laudantium
-            sapiente omnis eos similique ipsa fugit? Excepturi architecto autem
-            laboriosam earum dignissimos? Ratione quibusdam illo soluta vero
-            excepturi molestias ad voluptates voluptate odit, inventore adipisci
-            quae commodi perspiciatis voluptatem, laudantium repudiandae magnam
-            eos sit obcaecati eveniet aperiam nesciunt autem? Doloremque,
-            reiciendis porro.
+            GoldenMED to klinika, w której medycyna spotyka się z estetyką.
+            Łączymy wiedzę lekarzy, doświadczenie kosmetologów i nowoczesne
+            technologie, aby pomagać Ci wyglądać i czuć się dobrze — w zgodzie z
+            naturą Twojej urody.
+          </p>
+          <p>
+            Każdą terapię zaczynamy od rozmowy i dokładnej diagnostyki.
+            Proponujemy tylko te zabiegi, które mają sens w Twoim przypadku, a po
+            ich wykonaniu pozostajemy do Twojej dyspozycji.
           </p>
           <div className="tags">
-            <Link href="" className="tags-slot">
-              Laseroterapia
-            </Link>
-            <Link href="" className="tags-slot">
-              Medycyna estetyczna
-            </Link>
-            <Link href="" className="tags-slot">
-              Kosmetologia
-            </Link>
+            {services
+              .filter((service) => service.popular)
+              .map((service) => (
+                <Link
+                  key={service.slug}
+                  href={`/oferta/${service.slug}`}
+                  className="tags-slot"
+                >
+                  {service.name}
+                </Link>
+              ))}
           </div>
         </div>
       </div>

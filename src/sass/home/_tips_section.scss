@@ -1,5 +1,5 @@
 .tips-section {
-  background-color: $white_color;
+  background-color: $grey_color04;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -7,13 +7,20 @@
   &-wrapper {
     position: relative;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: flex-start;
+    gap: 80px;
     width: 1240px;
     height: 100%;
     margin: 0 auto;
-    padding: 64px 0;
+    padding: 96px 0;
+    &__text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      flex: 0 0 380px;
+    }
     h2 {
       font: normal normal 500 32px/44px Poppins;
       color: $golden01;
@@ -21,7 +28,7 @@
     }
     p {
       font: normal normal 200 16px/28px Poppins;
-      margin: 0 0 16px 0;
+      margin: 0 0 24px 0;
     }
   }
 }
@@ -30,14 +37,20 @@
   .tips-section {
     padding: 24px 16px;
     &-wrapper {
+      flex-direction: column;
+      gap: 16px;
       width: 100%;
-      padding: 0;
+      padding: 0 0 16px 0;
+      &__text {
+        flex: unset;
+      }
       h2 {
         font: normal normal 300 22px/32px Poppins;
         margin: 16px 0;
       }
       p {
         font: normal normal 200 14px/20px Poppins;
+        margin: 0 0 16px 0;
       }
     }
   }

@@ -1,6 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import logoGoldenMed from "./../../../public/icons/common/goldenmed-logo.svg";
+import { services } from "@/data/services";
+import { siteInfo } from "@/data/site";
 
 const Footer = () => {
   return (
@@ -17,63 +19,62 @@ const Footer = () => {
               />
             </Link>
             <div className="footer-info-text">
-              <p>al. Zwycięstwa 24/44</p>
-              <p>02-245 Warszawa</p>
+              <p>{siteInfo.street}</p>
+              <p>{siteInfo.city}</p>
             </div>
             <div className="location-info">
-              <Link href="">
+              <a href={siteInfo.mapsUrl} target="_blank" rel="noopener noreferrer">
                 <span>sprawdź jak dojechać</span>
-              </Link>
+              </a>
             </div>
           </div>
           <div className="footer-wrapper-top-col">
-            <h2>Zakładka</h2>
-            <Link className="footer-link" href="">
-              link
+            <h2>Oferta</h2>
+            {services.map((service) => (
+              <Link
+                key={service.slug}
+                className="footer-link"
+                href={`/oferta/${service.slug}`}
+              >
+                {service.name}
+              </Link>
+            ))}
+          </div>
+          <div className="footer-wrapper-top-col">
+            <h2>Dla pacjenta</h2>
+            <Link className="footer-link" href="/nasza-kadra">
+              Nasza kadra
             </Link>
-            <Link className="footer-link" href="">
-              link
+            <Link className="footer-link" href="/cennik">
+              Cennik
             </Link>
-            <Link className="footer-link" href="">
-              link
+            <Link className="footer-link" href="/aktualnosci">
+              Aktualności
             </Link>
-            <Link className="footer-link" href="">
-              link
+            <Link className="footer-link" href="/kontakt">
+              Kontakt
+            </Link>
+            <Link className="footer-link" href="/polityka-prywatnosci">
+              Polityka prywatności
             </Link>
           </div>
           <div className="footer-wrapper-top-col">
-            <h2>Zakładka</h2>
-            <Link className="footer-link" href="">
-              link
-            </Link>
-            <Link className="footer-link" href="">
-              link
-            </Link>
-            <Link className="footer-link" href="">
-              link
-            </Link>
-            <Link className="footer-link" href="">
-              link
-            </Link>
-          </div>
-          <div className="footer-wrapper-top-col">
-            <h2>Zakładka</h2>
-            <Link className="footer-link" href="">
-              link
-            </Link>
-            <Link className="footer-link" href="">
-              link
-            </Link>
-            <Link className="footer-link" href="">
-              link
-            </Link>
-            <Link className="footer-link" href="">
-              link
-            </Link>
+            <h2>Kontakt</h2>
+            <a className="footer-link" href={siteInfo.phoneHref}>
+              {siteInfo.phone}
+            </a>
+            <a className="footer-link" href={`mailto:${siteInfo.email}`}>
+              {siteInfo.email}
+            </a>
+            {siteInfo.openingHours.map((item) => (
+              <p key={item.days} className="footer-hours">
+                <span>{item.days}:</span> {item.hours}
+              </p>
+            ))}
           </div>
         </div>
         <div className="footer-wrapper-bottom">
-          <span>© GoldenMED 2024</span>
+          <span>© GoldenMED {new Date().getFullYear()}</span>
         </div>
       </div>
     </footer>

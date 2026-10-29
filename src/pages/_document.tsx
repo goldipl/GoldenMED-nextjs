@@ -15,11 +15,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="pl">
-        <Head>
-          <link rel="icon" href="./favicon.ico" />
-          <link rel="apple-touch-icon" href="./favicon.ico" />
-          <title>GoldenMED</title>
-        </Head>
+        <Head />
         <body>
           <Main />
           <NextScript />

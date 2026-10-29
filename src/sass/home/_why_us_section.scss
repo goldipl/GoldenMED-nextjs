@@ -1,0 +1,107 @@
+.why-us-section {
+  display: flex;
+  width: 100%;
+  background-color: $dark_brown;
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 1240px;
+    margin: 0 auto;
+    padding: 96px 0;
+  }
+  &__stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    margin: 0 0 64px 0;
+    border-top: 1px solid rgb(255 255 255 / 15%);
+    border-bottom: 1px solid rgb(255 255 255 / 15%);
+    .stat {
+      display: flex;
+      flex-direction: column;
+      padding: 32px 24px;
+      &:not(:first-child) {
+        border-left: 1px solid rgb(255 255 255 / 15%);
+      }
+      &__value {
+        font: normal normal 300 52px/64px Poppins;
+        color: $golden05;
+      }
+      &__label {
+        font: normal normal 300 16px/24px Poppins;
+        color: $grey_color03;
+      }
+    }
+  }
+  &__features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    width: 100%;
+    .feature {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        border: 1px solid $golden05;
+        color: $golden05;
+      }
+      h3 {
+        font: normal normal 500 18px/26px Poppins;
+        color: $white_color;
+      }
+      p {
+        font: normal normal 200 15px/24px Poppins;
+        color: $grey_color03;
+      }
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .why-us-section {
+    &-wrapper {
+      width: 100%;
+      padding: 40px 16px;
+    }
+    &__stats {
+      grid-template-columns: repeat(2, 1fr);
+      margin: 0 0 32px 0;
+      .stat {
+        padding: 20px 16px;
+        &:nth-child(3) {
+          border-left: 0;
+        }
+        &:nth-child(n + 3) {
+          border-top: 1px solid rgb(255 255 255 / 15%);
+        }
+        &__value {
+          font: normal normal 300 36px/44px Poppins;
+        }
+        &__label {
+          font: normal normal 300 14px/20px Poppins;
+        }
+      }
+    }
+    &__features {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      .feature p {
+        font: normal normal 200 14px/22px Poppins;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .why-us-section__features {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,52 @@
+.contact-cta {
+  display: flex;
+  width: 100%;
+  background: linear-gradient(135deg, $golden01 0%, $dark_brown 100%);
+  &-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    width: 1240px;
+    margin: 0 auto;
+    padding: 72px 0;
+    &__text {
+      h2 {
+        font: normal normal 300 36px/48px Poppins;
+        color: $white_color;
+      }
+      p {
+        font: normal normal 200 17px/28px Poppins;
+        color: $grey_color03;
+        max-width: 620px;
+        margin: 12px 0 0 0;
+      }
+    }
+    &__btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .contact-cta {
+    &-wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      padding: 40px 16px;
+      gap: 24px;
+      &__text {
+        h2 {
+          font: normal normal 300 24px/32px Poppins;
+        }
+        p {
+          font: normal normal 200 14px/22px Poppins;
+        }
+      }
+    }
+  }
+}
